@@ -39,7 +39,7 @@ if(isset($_POST["nom"])){
     if ($err=0) {
         echo "ok";
     } else {
-        header("LOCATION:index.php");
+        header("LOCATION:index.php?");
     }
     
      
@@ -47,8 +47,7 @@ if(isset($_POST["nom"])){
     
         //redirection si l'utilisateur n'est pas passé par mon formulaire
 
-        header("LOCATION:index.php?");
+        header("LOCATION:index.php?=error".$err);
     }
-
 
 ?>
